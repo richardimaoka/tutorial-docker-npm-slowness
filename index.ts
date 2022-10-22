@@ -4,7 +4,7 @@ import { setTimeout } from "timers/promises";
 import { Query, Resolvers } from "./generated/graphql";
 
 const typeDefs = gql`
-  ${fs.readFileSync(__dirname.concat("/../schema.gql"), "utf8")}
+  ${fs.readFileSync(__dirname.concat("/schema.gql"), "utf8")}
 `;
 
 const readJsonFileSync = (relativeFileName: string): Query => {
@@ -15,7 +15,7 @@ const readJsonFileSync = (relativeFileName: string): Query => {
 };
 
 // throws on error
-const queryDataSync: Query = readJsonFileSync("/../data/Query.json");
+const queryDataSync: Query = readJsonFileSync("/data/Query.json");
 
 // hack - see where it's used within Resolver for more detail
 const useDefaultResolver: any = null;
