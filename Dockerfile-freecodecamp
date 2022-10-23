@@ -1,6 +1,6 @@
 FROM node:18-alpine
-WORKDIR /src
-ADD package.json /src 
+WORKDIR /app
+ADD package.json /app 
 RUN npm i --silent
-ADD . /src 
-CMD npm start
+ADD . /app 
+CMD npm run start
